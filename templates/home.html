@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content_home %}
+    {% for u in user%}
+    {% if u['content'] %}
+    <div>{{u['name']}} posted {{u['content']}}</div>
+    {% else %}
+    <div>{{u['name']}} posted nothing.</div>
+    {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+<ls><b>testing differnt blocks</b></ls>
+{%endblock%}
