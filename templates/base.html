@@ -8,13 +8,14 @@
     <title>Welcome Guest</title>
     {%endif%}
 
+
 </head>
 <body>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul>
                 {% for message in messages%}
-                <li> {{ message }}</li>
+                <p> <span style="font-weight:bold;color:green">{{ message }}</span> </p>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -23,6 +24,7 @@
 {% endblock %}
 {% block content_home %}
 {% endblock %}
+
 
 </body>
 </html>
